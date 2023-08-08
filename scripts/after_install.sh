@@ -20,6 +20,7 @@ pip install -r /srv/HelloWorldApi/requirements.txt
 sudo supervisorctl stop hello-world-api
 sudo supervisorctl reread
 sudo supervisorctl update
+sudo supervisorctl start hello-world-api
 
 # Reload Nginx
 sudo nginx -s reload
