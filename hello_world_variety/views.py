@@ -32,4 +32,4 @@ def call_helloworld(request):
 
 @api_view(['GET'])
 def just_helloworld(request):
-    return Response({'message': 'I just Serve a response, Sorry'})
+    return Response({'message': 'I just Serve a Very Nice response, Thank You'})
