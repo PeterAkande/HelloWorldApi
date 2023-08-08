@@ -17,5 +17,11 @@ sudo apt-get update
 sudo apt-get install -y python3 python3-dev python3-pip python3-venv
 pip install --user --upgrade virtualenv
 
+# Make the Directory to store the env file
+sudo mkdir /srv/hello-world-api-env
+
+# Force Move the file
+sudo mv -f /srv/HelloWorldApi/.env /srv/hello-world-api-env/.env
+
 # delete app From the Directory
 sudo rm -rf /srv/HelloWorldApi

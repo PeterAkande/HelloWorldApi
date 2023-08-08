@@ -9,12 +9,19 @@ sudo pkill -f gunicorn # Kill Gunicorn Server
 # sudo pkill -f node
 
 cd /srv/HelloWorldApi
+# Copy the .env file to this directory
+sudo cp /srv/hello-world-api-env/.env /srv/HelloWorldApi/.env
+
+python3 -m venv venv
 
 # activate virtual environment
 source venv/bin/activate
 
 install requirements.txt
 pip install -r /srv/HelloWorldApi/requirements.txt
+
+pip install psycopg2-binary
+pip install gunicorn
 
 # Tell Supervisor to Kill all instance
 sudo supervisorctl stop hello-world-api
